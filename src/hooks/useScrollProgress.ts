@@ -17,7 +17,7 @@ function useScrollProgress({ scrollRef, onScroll }: UseScrollProgressProps) {
     const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
 
     setScrollProgress(progress);
-    if (onScroll) onScroll(progress); // Call the onScroll callback if provided
+    if (onScroll) onScroll(progress);
   };
 
   useEffect(() => {
@@ -25,7 +25,7 @@ function useScrollProgress({ scrollRef, onScroll }: UseScrollProgressProps) {
 
     const container = scrollRef.current;
 
-    updateScrollProgress(); // Call initially
+    updateScrollProgress();
     container.addEventListener("scroll", updateScrollProgress);
 
     return () => {

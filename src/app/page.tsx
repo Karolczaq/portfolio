@@ -22,7 +22,7 @@ export default function Home() {
       <Navbar scrollProgress={pageState.scrollProgress} />{" "}
       <main
         ref={scrollRef}
-        className="w-full h-screen overflow-x-hidden overflow-y-scroll scrollbar-thin scroll-smooth select-none bg-zinc-800"
+        className="w-full h-screen overflow-x-hidden overflow-y-scroll snap-y scrollbar-thin scroll-smooth select-none bg-zinc-800"
       >
         <About />
         <Projects />

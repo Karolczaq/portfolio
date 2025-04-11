@@ -11,7 +11,7 @@ export default function ScrollProgress({
     <div
       className="fixed top-0 left-0 h-1 bg-amber-500"
       style={{
-        width: `${progress}%`, // Use the progress prop to set the width
+        width: `${progress}%`,
         zIndex,
       }}
     />

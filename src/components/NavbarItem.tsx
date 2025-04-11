@@ -17,7 +17,7 @@ const NavbarItem: FC<NavbarItemProps> = ({
   return (
     <a
       className={`flex transition-all text-lg gap-2 ${
-        active ? "text-amber-100" : ""
+        active ? "text-amber-400" : "text-gray-400"
       }`}
       {...props}
     >
