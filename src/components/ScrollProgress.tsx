@@ -1,14 +1,19 @@
+type ScrollProgressProps = {
+  progress: number; // Accept progress as a prop
+  zIndex?: number;
+};
+
 export default function ScrollProgress({
   progress,
-  zIndex,
-}: {
-  progress: number;
-  zIndex: number;
-}) {
+  zIndex = 50,
+}: ScrollProgressProps) {
   return (
     <div
-      style={{ width: `${progress}%`, zIndex: zIndex }}
-      className="absolute transition-all top-0 h-[0.3rem] bg-amber-100"
-    ></div>
+      className="fixed top-0 left-0 h-1 bg-amber-500"
+      style={{
+        width: `${progress}%`, // Use the progress prop to set the width
+        zIndex,
+      }}
+    />
   );
 }

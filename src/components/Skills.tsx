@@ -1,7 +1,7 @@
-export default function About() {
+export default function Skills() {
   return (
     <div
-      id="about"
+      id="skills"
       className="w-full h-screen snap-start flex items-center justify-center"
     >
       <div className="p-6 max-w-2xl bg-zinc-700 rounded-lg">

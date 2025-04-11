@@ -1,7 +1,7 @@
-export default function About() {
+export default function Projects() {
   return (
     <div
-      id="about"
+      id="projects"
       className="w-full h-screen snap-start flex items-center justify-center"
     >
       <div className="p-6 max-w-2xl bg-zinc-700 rounded-lg">
