@@ -1,6 +1,7 @@
 import { socialLinks } from "@/utils/socialLinks";
 import { IoIosArrowDown } from "react-icons/io";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function About() {
   const handleCopyToClipboard = (text: string) => {
@@ -43,8 +44,7 @@ export default function About() {
           <a
             key={link.name}
             href={link.href}
-            onClick={(e) => {
-              e.preventDefault();
+            onClick={() => {
               if (link.copyText) {
                 handleCopyToClipboard(link.copyText);
               }
@@ -57,9 +57,9 @@ export default function About() {
           </a>
         ))}
       </div>
-      <a href="#projects" className="p-4 absolute bottom-15 animate-bounce">
+      <Link href="#projects" className="p-4 absolute bottom-15 animate-bounce">
         <IoIosArrowDown className="text-5xl text-amber-100" />
-      </a>
+      </Link>
     </div>
   );
 }
