@@ -1,4 +1,4 @@
-import {skillType} from './skillType'
-import {postType} from './postType'
+import { skillType } from "./skillType";
+import { projectType } from "./projectType";
 
-export const schemaTypes = [skillType, postType]
+export const schemaTypes = [skillType, projectType];

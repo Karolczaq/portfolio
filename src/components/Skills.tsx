@@ -2,14 +2,7 @@
 
 import { useEffect, useState } from "react";
 import SkillContainer from "./Skills/SkillContainer";
-
-type Skill = {
-  _id: string;
-  name: string;
-  type: string;
-  color: string;
-  logoUrl: string;
-};
+import { Skill } from "@/app/api/getSkills/route";
 
 export default function Skills() {
   const [skills, setSkills] = useState<Skill[]>([]);

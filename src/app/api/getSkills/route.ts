@@ -2,16 +2,12 @@ import { groq } from "next-sanity";
 import { NextResponse } from "next/server";
 import { client } from "@/sanity/sanity-utils";
 
-type Skill = {
+export type Skill = {
   _id: string;
   name: string;
   type: string;
-  color: { hex: string };
-  logo: {
-    asset: {
-      url: string;
-    };
-  };
+  color: string;
+  logoUrl: string;
 };
 
 const query = groq`
