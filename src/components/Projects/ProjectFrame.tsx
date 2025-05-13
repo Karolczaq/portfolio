@@ -72,10 +72,10 @@ const ProjectFrame: React.FC<ProjectFrameProps> = ({ project, onClose }) => {
         )}
         {markdown && (
           <div
-            className={`absolute inset-0 z-10 rounded-lg w-full h-full overflow-y-auto transition-all duration-300 ${
+            className={`absolute inset-0 rounded-lg w-full h-full overflow-y-auto transition-all duration-300 ${
               isDescriptionVisible
-                ? "opacity-100 scale-100"
-                : "opacity-0 scale-95"
+                ? "opacity-100 scale-100 z-10"
+                : "opacity-0 scale-95 -z-1"
             }`}
             style={{ background: "rgba(0, 0, 0, 0.95)" }}
           >
