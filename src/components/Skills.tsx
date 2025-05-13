@@ -1,15 +1,44 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import SkillContainer from "./Skills/SkillContainer";
+
+type Skill = {
+  _id: string;
+  name: string;
+  type: string;
+  color: string;
+  logoUrl: string;
+};
+
 export default function Skills() {
+  const [skills, setSkills] = useState<Skill[]>([]);
+
+  useEffect(() => {
+    const fetchSkills = async () => {
+      const res = await fetch("/api/getSkills");
+      const data = await res.json();
+      setSkills(data.skills);
+      console.log(data.skills);
+    };
+
+    fetchSkills();
+  }, []);
+
   return (
     <div
       id="skills"
-      className="w-full h-screen snap-start flex items-center justify-center"
+      className="w-full h-screen snap-start flex items-center justify-center px-4"
     >
-      <div className="p-6 max-w-2xl bg-zinc-700 rounded-lg">
-        <span className="text-amber-100 text-2xl font-bold break-words">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          convallis ex sit amet dui sodales accumsan. Suspendisse potenti. Donec
-          hendrerit nulla sed feugiat varius. Nullam et egestas risus.
-        </span>
+      <div className="p-6 max-w-5xl bg-zinc-700 rounded-lg">
+        <h2 className="text-amber-100 text-3xl font-bold mb-6 text-center">
+          Skills
+        </h2>
+        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6 w-full">
+          {skills.map((skill) => (
+            <SkillContainer key={skill._id} skill={skill} />
+          ))}
+        </div>
       </div>
     </div>
   );

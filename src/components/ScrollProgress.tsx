@@ -1,5 +1,5 @@
 type ScrollProgressProps = {
-  progress: number; // Accept progress as a prop
+  progress: number;
   zIndex?: number;
 };
 

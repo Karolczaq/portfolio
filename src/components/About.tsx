@@ -13,7 +13,7 @@ export default function About() {
   return (
     <div
       id="about"
-      className="w-full h-screen snap-start flex flex-col md:flex-row items-center justify-center md:space-y-0 gap-8 relative"
+      className="w-full h-screen snap-start flex flex-col md:flex-row items-center justify-center md:space-y-0 gap-8 px-4 relative"
     >
       <div className="flex flex-col items-center min-w-[192px] min-h-[192px]">
         <Image
@@ -31,7 +31,7 @@ export default function About() {
       <div className="p-6 max-w-xl bg-zinc-700 rounded-lg text-center mx-4 md:mx-0">
         <span className="text-amber-100 text-lg font-bold break-words">
           Hello! I’m an aspiring{" "}
-          <span className="text-amber-400">full-stack</span> developer with a
+          <span className="text-amber-400">Full-Stack</span> developer with a
           passion for creating efficient, scalable, and user-friendly
           applications. My journey in software development has been driven by a
           deep curiosity for how technology can solve real-world problems and
@@ -57,7 +57,7 @@ export default function About() {
           </a>
         ))}
       </div>
-      <Link href="#projects" className="p-4 absolute bottom-15 animate-bounce">
+      <Link href="#projects" className="p-4 absolute bottom-10 animate-bounce">
         <IoIosArrowDown className="text-5xl text-amber-100" />
       </Link>
     </div>
