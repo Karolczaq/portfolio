@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Project } from "@/app/api/getProjects/route";
 import { IoClose } from "react-icons/io5";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-import rehypeRaw from "rehype-raw";
 import { BsFillMarkdownFill } from "react-icons/bs";
-import Image from "next/image";
+import ProjectReadme from "./ProjectReadme";
+import ProjectHeader from "./ProjectHeader";
 
 interface ProjectFrameProps {
   project?: Project;
@@ -72,108 +70,20 @@ const ProjectFrame: React.FC<ProjectFrameProps> = ({ project, onClose }) => {
             No Live URL Available
           </div>
         )}
-        {isDescriptionVisible && (
+        {markdown && (
           <div
-            className="absolute inset-0 z-10 rounded-lg"
+            className={`absolute inset-0 z-10 rounded-lg w-full h-full overflow-y-auto transition-all duration-300 ${
+              isDescriptionVisible
+                ? "opacity-100 scale-100"
+                : "opacity-0 scale-95"
+            }`}
             style={{ background: "rgba(0, 0, 0, 0.95)" }}
           >
-            <div className="w-full h-full overflow-y-auto">
-              <div className="flex items-center justify-center max-w-4xl mx-auto">
-                <div className="w-full p-5 pt-10 text-white">
-                  <div className="flex items-center justify-between mb-4">
-                    <div>
-                      <h1 className="text-4xl font-bold">{project.title}</h1>
-                      <div className="flex flex-wrap gap-2 mt-2">
-                        {project.technologies?.map((tech, index) => (
-                          <span
-                            key={index}
-                            className="px-2 py-1 text-sm bg-zinc-600 text-white rounded-lg"
-                          >
-                            <Image
-                              src={tech.logoUrl}
-                              alt={tech.name}
-                              width={32}
-                              height={32}
-                            />
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-4 font-bold">
-                      {project.githubUrl && (
-                        <a
-                          href={project.githubUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-amber-500 hover:text-amber-400"
-                        >
-                          GitHub
-                        </a>
-                      )}
-                      {project.liveUrl && (
-                        <a
-                          href={project.liveUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-amber-500 hover:text-amber-400"
-                        >
-                          Live Demo
-                        </a>
-                      )}
-                    </div>
-                  </div>
-                  <hr />
-                  {markdown && (
-                    <ReactMarkdown
-                      remarkPlugins={[remarkGfm]}
-                      rehypePlugins={[rehypeRaw]}
-                      components={{
-                        h1: ({ ...props }) => (
-                          <h1
-                            className="py-10 text-3xl font-bold lg:text-4xl"
-                            {...props}
-                          />
-                        ),
-                        h2: ({ ...props }) => (
-                          <h2
-                            className="py-2 font-medium text-md lg:text-xl xl:py-5"
-                            {...props}
-                          />
-                        ),
-                        table: ({ ...props }) => (
-                          <table
-                            className="w-full px-2 overflow-hidden text-center border-collapse rounded-lg xl:p-2"
-                            {...props}
-                          />
-                        ),
-                        thead: ({ ...props }) => (
-                          <thead
-                            className="border-b bg-neutral-700 border-neutral-500 text-neutral-50"
-                            {...props}
-                          />
-                        ),
-                        tbody: ({ ...props }) => (
-                          <tbody className="bg-neutral-800" {...props} />
-                        ),
-                        tr: ({ ...props }) => (
-                          <tr className="p-1 text-neutral-200" {...props} />
-                        ),
-                        td: ({ ...props }) => <td className="p-1" {...props} />,
-                        th: ({ ...props }) => (
-                          <th className="p-1 py-2" {...props} />
-                        ),
-                        pre: ({ ...props }) => (
-                          <pre
-                            className="p-2 my-2 text-sm whitespace-pre-wrap rounded-lg bg-neutral-800 text-neutral-200"
-                            {...props}
-                          />
-                        ),
-                      }}
-                    >
-                      {markdown}
-                    </ReactMarkdown>
-                  )}
-                </div>
+            <div className="flex items-center justify-center max-w-4xl mx-auto">
+              <div className="w-full p-5 pt-10 text-white">
+                <ProjectHeader project={project} />
+                <hr />
+                {markdown && <ProjectReadme markdown={markdown} />}
               </div>
             </div>
           </div>
