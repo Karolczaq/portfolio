@@ -31,12 +31,19 @@ export default function About() {
       <div className="p-6 max-w-xl bg-zinc-700 rounded-lg text-center mx-4 md:mx-0">
         <span className="text-amber-100 text-lg font-bold break-words">
           Hello! I’m an aspiring{" "}
-          <span className="text-amber-400">Full-Stack</span> developer with a
-          passion for creating efficient, scalable, and user-friendly
-          applications. My journey in software development has been driven by a
-          deep curiosity for how technology can solve real-world problems and
-          make everyday life easier.
+          <span className="text-amber-400">Full-Stack</span> developer
+          passionate about building web applications and eager to gain my first
+          professional experience. I enjoy solving challenges, learning new
+          technologies, and creating efficient solutions.
         </span>
+        <div className="mt-4">
+          <p className="text-amber-100 text-lg font-bold break-words">
+            I’m currently looking for an internship.
+          </p>
+          <p className="text-amber-100 text-lg font-bold break-words">
+            Reach me anytime 👉
+          </p>
+        </div>
       </div>
 
       <div className="flex flex-row md:flex-col space-x-4 md:space-x-0 md:space-y-4 font-bold">
@@ -57,7 +64,10 @@ export default function About() {
           </a>
         ))}
       </div>
-      <Link href="#projects" className="p-4 absolute bottom-10 animate-bounce">
+      <Link
+        href="#projects"
+        className="p-4 absolute bottom-5 md:bottom-10 animate-bounce"
+      >
         <IoIosArrowDown className="text-5xl text-amber-100" />
       </Link>
     </div>

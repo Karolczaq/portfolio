@@ -17,9 +17,7 @@ export type Project = {
     _id: string;
     name: string;
     type: string;
-    color: {
-      hex: string;
-    };
+    color: string;
     logoUrl: string;
   }[];
 };

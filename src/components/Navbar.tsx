@@ -13,9 +13,9 @@ export function Navbar({ scrollProgress }: NavbarProps) {
   const currentStage = useCurrentStage();
   return (
     <>
-      <ScrollProgress progress={scrollProgress} zIndex={50} />
+      <ScrollProgress progress={scrollProgress} zIndex={51} />
       <nav
-        className={`w-full absolute top-0 flex transition-all transition-300 justify-center bg-transparent backdrop-blur-sm border-amber-100 items-center p-4 z-10${
+        className={`w-full absolute top-0 flex transition-all transition-300 justify-center bg-transparent backdrop-blur-sm border-amber-100 items-center p-4 z-50${
           scrollProgress > 15 ? " border-b-1" : ""
         } `}
       >

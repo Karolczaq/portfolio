@@ -3,9 +3,12 @@
 import { useEffect, useState } from "react";
 import { Project } from "@/app/api/getProjects/route";
 import ProjectContainer from "./Projects/ProjectContainer";
+import ProjectFrame from "./Projects/ProjectFrame";
 
 export default function Projects() {
-  const [projects, setProjects] = useState<Project[]>([]);
+  const [projects, setProjects] = useState<Project[]>();
+  const [currentProject, setCurrentProject] = useState<Project>();
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -28,10 +31,25 @@ export default function Projects() {
         </h2>
         <div className="grid grid-cols-2 gap-6 w-full">
           {/* sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4  to add when more projects*/}
-          {projects.map((project) => (
-            <ProjectContainer key={project._id} project={project} />
+          {projects?.map((project) => (
+            <div
+              key={project._id}
+              className="flex justify-center cursor-pointer"
+              onClick={() => {
+                setCurrentProject(project);
+                setIsOpen(true);
+              }}
+            >
+              <ProjectContainer key={project._id} project={project} />
+            </div>
           ))}
         </div>
+        {isOpen && (
+          <ProjectFrame
+            project={currentProject}
+            onClose={() => setIsOpen(false)}
+          />
+        )}
       </div>
     </div>
   );
