@@ -120,3 +120,48 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 20%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 50% 70%;
+  }
+  100% {
+    background-position: 0% 20%;
+  }
+}
+.animate-gradient {
+  animation: gradient-move 8s ease-in-out infinite alternate;
+}
+
+.about-background {
+  background-color: hsla(328, 0%, 9%, 1);
+  background-image:
+    radial-gradient(at 100% 0%, hsla(38, 92%, 50%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(48, 96%, 89%, 1) 0px, transparent 50%);
+  background-size: 200% 200%;
+  background-position:
+    0% 20%,
+    100% 80%;
+}
+
+.projects-bg {
+  background-color: #18181b;
+  background-image:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(24, 24, 27, 0) 40%,
+      rgba(24, 24, 27, 0.85) 100%
+    ),
+    url("/ooorganizedark.svg");
+  background-size:
+    100% 100%,
+    400px 400px;
+  background-repeat: repeat;
+  background-position: center;
+}

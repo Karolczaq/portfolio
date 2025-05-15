@@ -13,7 +13,7 @@ export default function About() {
   return (
     <div
       id="about"
-      className="w-full h-screen snap-start flex flex-col md:flex-row items-center justify-center md:space-y-0 gap-8 px-4 relative"
+      className="w-full h-screen snap-start flex flex-col md:flex-row items-center justify-center md:space-y-0 gap-8 px-4 relative about-background animate-gradient"
     >
       <div className="flex flex-col items-center">
         <Image
@@ -23,12 +23,12 @@ export default function About() {
           height={192}
           className="object-cover rounded-full min-h-[160px] min-w-[160px]"
         />
-        <span className="mt-2 text-amber-100 text-xl font-bold">
+        <span className="mt-2 text-amber-200 text-xl font-bold">
           Karol Krasoń, <span className="text-zinc-400"> 19</span>
         </span>
       </div>
 
-      <div className="p-6 md:max-w-lg md:min-w-sm max-w-xl bg-zinc-700 rounded-lg text-center mx-4 md:mx-0">
+      <div className="p-6 md:max-w-lg md:min-w-sm max-w-xl bg-zinc-800 rounded-lg text-center mx-4 md:mx-0">
         <span className="text-amber-100 text-md font-bold break-words">
           Hello! I’m an aspiring{" "}
           <span className="text-amber-400">Full-Stack</span> developer

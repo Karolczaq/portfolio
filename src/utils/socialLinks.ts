@@ -11,7 +11,7 @@ export const socialLinks = [
     href: "https://github.com/karolczaq",
     sideIcon: FiExternalLink,
     className:
-      "p-4 bg-zinc-700 rounded-lg text-center text-amber-100 hover:bg-zinc-600 transition flex items-center space-x-2",
+      "p-4 bg-zinc-800 rounded-lg text-center text-amber-100 hover:bg-zinc-600 transition flex items-center space-x-2",
   },
   {
     name: "karolczaq",
@@ -19,7 +19,7 @@ export const socialLinks = [
     copyText: "karolczaq",
     sideIcon: FaCopy,
     className:
-      "p-4 bg-zinc-700 rounded-lg text-center text-amber-100 hover:bg-zinc-600 transition flex items-center space-x-2",
+      "p-4 bg-zinc-800 rounded-lg text-center text-amber-100 hover:bg-zinc-600 transition flex items-center space-x-2",
   },
   {
     name: "Email",
@@ -27,6 +27,6 @@ export const socialLinks = [
     copyText: "k.krasonn@gmail.com",
     sideIcon: FaCopy,
     className:
-      "p-4 bg-zinc-700 rounded-lg text-center text-amber-100 hover:bg-zinc-600 transition flex items-center space-x-2",
+      "p-4 bg-zinc-800 rounded-lg text-center text-amber-100 hover:bg-zinc-600 transition flex items-center space-x-2",
   },
 ];

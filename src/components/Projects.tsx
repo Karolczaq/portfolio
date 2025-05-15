@@ -23,10 +23,10 @@ export default function Projects() {
   return (
     <div
       id="projects"
-      className="w-full h-screen snap-start flex items-center justify-center px-4"
+      className="w-full h-screen snap-start flex items-center justify-center px-4 projects-bg"
     >
       <div className="p-6 max-w-6xl rounded-lg">
-        <h2 className="text-amber-100 text-3xl font-bold mb-20 text-center">
+        <h2 className="text-5xl sm:text-6xl font-bold mb-20 text-center bg-clip-text text-transparent bg-amber-100">
           Projects
         </h2>
         <div className="grid grid-cols-2 gap-6 w-full">

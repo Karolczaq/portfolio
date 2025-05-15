@@ -23,7 +23,7 @@ export default function Skills() {
       id="skills"
       className="w-full h-screen snap-start flex items-center justify-center px-4"
     >
-      <div className="p-6 max-w-5xl bg-zinc-700 rounded-lg">
+      <div className="p-6 max-w-5xl bg-zinc-800 rounded-lg">
         <h2 className="text-amber-100 text-3xl font-bold mb-6 text-center">
           Skills
         </h2>
