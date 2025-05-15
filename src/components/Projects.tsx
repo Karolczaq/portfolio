@@ -26,7 +26,7 @@ export default function Projects() {
       className="w-full h-screen snap-start flex items-center justify-center px-4 projects-bg"
     >
       <div className="p-6 max-w-6xl rounded-lg">
-        <h2 className="text-5xl sm:text-6xl font-bold mb-20 text-center bg-clip-text text-transparent bg-amber-100">
+        <h2 className="text-5xl sm:text-6xl font-bold mb-20 text-center bg-clip-text text-transparent bg-amber-100 p-2">
           Projects
         </h2>
         <div className="grid grid-cols-2 gap-6 w-full">
