@@ -3,16 +3,12 @@ type ScrollProgressProps = {
   zIndex?: number;
 };
 
-export default function ScrollProgress({
-  progress,
-  zIndex = 50,
-}: ScrollProgressProps) {
+export default function ScrollProgress({ progress }: ScrollProgressProps) {
   return (
     <div
-      className="fixed top-0 left-0 h-1 bg-amber-500"
+      className="fixed top-0 left-0 h-1 bg-amber-500 z-50"
       style={{
         width: `${progress}%`,
-        zIndex,
       }}
     />
   );

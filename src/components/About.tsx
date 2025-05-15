@@ -15,21 +15,21 @@ export default function About() {
       id="about"
       className="w-full h-screen snap-start flex flex-col md:flex-row items-center justify-center md:space-y-0 gap-8 px-4 relative"
     >
-      <div className="flex flex-col items-center min-w-[192px] min-h-[192px]">
+      <div className="flex flex-col items-center">
         <Image
           src="/photo.jpg"
           alt="Profile"
           width={192}
           height={192}
-          className="object-cover rounded-full"
+          className="object-cover rounded-full min-h-[160px] min-w-[160px]"
         />
         <span className="mt-2 text-amber-100 text-xl font-bold">
           Karol Krasoń, <span className="text-zinc-400"> 19</span>
         </span>
       </div>
 
-      <div className="p-6 max-w-xl bg-zinc-700 rounded-lg text-center mx-4 md:mx-0">
-        <span className="text-amber-100 text-lg font-bold break-words">
+      <div className="p-6 md:max-w-lg md:min-w-sm max-w-xl bg-zinc-700 rounded-lg text-center mx-4 md:mx-0">
+        <span className="text-amber-100 text-md font-bold break-words">
           Hello! I’m an aspiring{" "}
           <span className="text-amber-400">Full-Stack</span> developer
           passionate about building web applications and eager to gain my first
@@ -41,7 +41,8 @@ export default function About() {
             I’m currently looking for an internship.
           </p>
           <p className="text-amber-100 text-lg font-bold break-words">
-            Reach me anytime 👉
+            <span className="hidden md:inline">Reach me anytime 👉</span>
+            <span className="inline md:hidden">Reach me anytime 👇</span>
           </p>
         </div>
       </div>
