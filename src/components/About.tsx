@@ -29,7 +29,7 @@ export default function About() {
       </div>
 
       <div className="p-6 md:max-w-lg md:min-w-sm max-w-xl bg-zinc-800 rounded-lg text-center mx-4 md:mx-0">
-        <span className="text-amber-100 text-md font-bold break-words">
+        <span className="text-amber-100 text-sm md:text-base font-bold break-words">
           Hello! I’m an aspiring{" "}
           <span className="text-amber-400">Full-Stack</span> developer
           passionate about building web applications and eager to gain my first
@@ -37,10 +37,10 @@ export default function About() {
           technologies, and creating efficient solutions.
         </span>
         <div className="mt-4">
-          <p className="text-amber-100 text-lg font-bold break-words">
+          <p className="text-amber-100 text-md md:text-lg font-bold break-words">
             I’m currently looking for an internship.
           </p>
-          <p className="text-amber-100 text-lg font-bold break-words">
+          <p className="text-amber-100 text-md md:text-lg font-bold break-words">
             <span className="hidden md:inline">Reach me anytime 👉</span>
             <span className="inline md:hidden">Reach me anytime 👇</span>
           </p>
