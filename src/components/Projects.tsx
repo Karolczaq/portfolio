@@ -29,7 +29,7 @@ export default function Projects() {
         <h2 className="text-5xl sm:text-6xl font-bold mb-20 text-center bg-clip-text text-transparent bg-amber-100 p-2">
           Projects
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-6 w-full">
           {/* sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4  to add when more projects*/}
           {projects?.map((project) => (
             <div
