@@ -13,15 +13,15 @@ export default function About() {
   return (
     <div
       id="about"
-      className="w-full h-screen snap-start flex flex-col md:flex-row items-center justify-center md:space-y-0 gap-8 px-4 relative about-background animate-gradient"
+      className="w-full h-screen snap-start flex flex-col md:flex-row items-center justify-center md:space-y-0 gap-4 md:gap-8 px-4 relative about-background animate-gradient"
     >
-      <div className="flex flex-col items-center">
+      <div className="flex flex-row sm:flex-col items-center gap-4">
         <Image
           src="/photo.jpg"
           alt="Profile"
           width={192}
           height={192}
-          className="object-cover rounded-full min-h-[160px] min-w-[160px]"
+          className="object-cover rounded-full min-h-[100px] min-w-[100px] md:min-h-[160px] md:min-w-[160px]"
         />
         <span className="mt-2 text-amber-200 text-xl font-bold">
           Karol Krasoń, <span className="text-zinc-400"> 19</span>
