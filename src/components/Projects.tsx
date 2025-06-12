@@ -23,14 +23,13 @@ export default function Projects() {
   return (
     <div
       id="projects"
-      className="w-full h-screen snap-start flex items-center justify-center px-4 projects-bg"
+      className="w-full min-h-screen snap-start flex items-center justify-center px-4 projects-bg"
     >
       <div className="p-6 max-w-6xl rounded-lg">
-        <h2 className="text-5xl sm:text-6xl font-bold mb-20 text-center bg-clip-text text-transparent bg-amber-100 p-2">
+        <h2 className="text-5xl sm:text-6xl font-bold mb-10 md:mb-20 mt-15 md:mt-0 text-center bg-clip-text text-transparent bg-amber-100 p-2">
           Projects
         </h2>
         <div className="grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 w-full">
-          {/* sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4  to add when more projects*/}
           {projects?.map((project) => (
             <div
               key={project._id}
