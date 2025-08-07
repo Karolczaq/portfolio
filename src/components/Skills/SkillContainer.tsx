@@ -29,9 +29,6 @@ const SkillContainer: FC<SkillProps> = ({ skill, className, ...props }) => {
         <div className="text-[0.7rem] font-medium sm:text-sm md:text-base text-neutral-200">
           {skill?.name}
         </div>
-        <div className="text-[0.65rem] md:text-sm text-neutral-400">
-          {skill?.type}
-        </div>
       </div>
     </div>
   );
