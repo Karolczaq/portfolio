@@ -38,9 +38,6 @@ export default function About() {
         </span>
         <div className="mt-4">
           <p className="text-amber-100 text-md md:text-lg font-bold break-words">
-            I’m currently looking for an internship.
-          </p>
-          <p className="text-amber-100 text-md md:text-lg font-bold break-words">
             <span className="hidden md:inline">Reach me anytime 👉</span>
             <span className="inline md:hidden">Reach me anytime 👇</span>
           </p>
